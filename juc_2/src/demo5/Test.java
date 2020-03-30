@@ -2,6 +2,8 @@ package demo5;
 
 import java.util.concurrent.TimeUnit;
 
+
+//死锁
 public class Test {
     public static void main(String[] args) {
         DeadLock deadLock1=new DeadLock(1);
