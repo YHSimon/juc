@@ -14,11 +14,7 @@ public class ProCon2 {
         }, "A").start();
 
         new Thread(() -> {
-<<<<<<< HEAD
             for (int i = 0; i < 30; i++) {
-=======
-            for (int i = 0; i < 50; i++) {
->>>>>>> e4c66f466d69be657b802c26a52394c049f5892b
                 data.decrease();
             }
         }, "B").start();
@@ -44,7 +40,7 @@ class Data {
             System.out.println(Thread.currentThread().getName() + "-->" + num);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
 
@@ -53,18 +49,18 @@ class Data {
     /**
      * 减一
      */
-    public  void decrease() {
+    public void decrease() {
         lock.lock();
-        try{
+        try {
             while (num == 0) {
                 condition.await();
             }
             num--;
             condition.signal();
             System.out.println(Thread.currentThread().getName() + "-->" + num);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
 
