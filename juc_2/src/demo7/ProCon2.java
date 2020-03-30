@@ -14,7 +14,11 @@ public class ProCon2 {
         }, "A").start();
 
         new Thread(() -> {
+<<<<<<< HEAD
             for (int i = 0; i < 30; i++) {
+=======
+            for (int i = 0; i < 50; i++) {
+>>>>>>> e4c66f466d69be657b802c26a52394c049f5892b
                 data.decrease();
             }
         }, "B").start();
