@@ -12,7 +12,6 @@ public class CountDownTest {
         //1. 实例化计数器 100
         CountDownLatch countDownLatch=new CountDownLatch(100);
 
-
         new Thread(()->{
             for (int i=0;i<100;i++){
                 System.out.println("++++++Thread");
@@ -32,8 +31,6 @@ public class CountDownTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
     }
 
 }
