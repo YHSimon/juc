@@ -6,7 +6,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 减法计数器
  */
-public class CountDownTest {
+public class CountDownLatchTest {
     public static void main(String[] args) {
         //优先执行，执行完毕之后，才能执行main  (克制并发)
         //1. 实例化计数器 100
