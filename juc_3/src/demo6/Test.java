@@ -14,10 +14,12 @@ public class Test {
                 TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(2),
                 Executors.defaultThreadFactory(),
+
                 //new ThreadPoolExecutor.AbortPolicy()  //抛异常
                 //new ThreadPoolExecutor.DiscardPolicy()   //不抛异常 直接放弃
                 //new ThreadPoolExecutor.DiscardOldestPolicy()  //尝试与队列最前⾯的任务去竞争，不抛出异常
                 new ThreadPoolExecutor.CallerRunsPolicy()         //谁调用谁处理  比如main进程
+
         );
         //开始营业
         for (int i = 0; i < 6; i++) {
