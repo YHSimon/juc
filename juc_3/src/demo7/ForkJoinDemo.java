@@ -24,6 +24,7 @@ public class ForkJoinDemo extends RecursiveTask<Long> {
         }else {
             Long avg=(start+end)/2;
             ForkJoinDemo task1=new ForkJoinDemo(start, avg);
+            //执行子任务
             task1.fork();
             ForkJoinDemo task2=new ForkJoinDemo(avg+1, end);
             task2.fork();
